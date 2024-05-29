@@ -44,7 +44,7 @@ branch_name=$(git branch --show-current)
     BugPriority_arr+=("$BugPriority")
     GitHubURL_arr+=("$GitHubURL")
   done
-} < Book2.csv
+} < "${BookName}"
 for (( i=0; i<${#bug_ids[@]}; i++ )); do
 	if [ ${branch_name} == ${branch_arr[i]} ]; then 
   	Commit="
